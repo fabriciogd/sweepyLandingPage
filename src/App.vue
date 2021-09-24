@@ -2,7 +2,7 @@
   <div id="app">
     <img class="image-top" src="./assets/Grupo 10219@2x.png" />
     <v-row justify-content="end" class="wrapper-intro">
-      <v-col class="container-intro" cols="6">
+      <v-col class="container-intro" cols="6" xl="6" lg="6" md="12" sm="12">
         <span class="title">
           SIMPLICIDADE
         </span>
@@ -15,17 +15,38 @@
           os seus clientes pra você, onde quer que eles estejam.
         </span>
       </v-col>
-      <v-col cols="4">
+      <v-col xl="4" lg="4" md="12" sm="12">
         <img class="image-form" src="./assets/shutterstock_1780458068_2.png" />
-        <v-form class="form-fields">
-          <v-text-field v-model="name" class="form-field" label="Nome" background-color="#696868" solo hide-details="auto" />
-          <v-text-field v-model="email" class="form-field" label="Email" background-color="#696868" solo hide-details="auto" />
-          <v-btn class="button-submit" rounded color="#16DFFF" @click="submit">Quero meu acesso</v-btn>
-        </v-form>
+        <v-col cols="12">
+          <v-row> 
+            <span class="title-want-section">
+              Quero receber <br/> acesso antecipado
+            </span>
+          </v-row>
+          <v-form class="form-fields">
+            <v-row align="left"> 
+              <span class="span-text" style="margin-left: 40px;"> Seu nome </span>
+            </v-row>
+            <v-row align="left" class="mr-5"> 
+              <v-text-field v-model="name" class="form-field" background-color="#696868" solo hide-details="auto" />
+            </v-row>
+            <v-row align="left"> 
+              <span class="span-text" style="margin-left: 40px;"> E-mail </span>
+            </v-row>
+            <v-row align="left"> 
+              <v-text-field v-model="email" class="form-field" background-color="#696868" solo hide-details="auto" />
+            </v-row>
+            <v-row align="left" style="margin-left: 40px;">
+              <v-btn class="button-submit" rounded color="#16DFFF" @click="submit">Quero meu acesso <v-icon dark>
+        mdi-arrow-right
+      </v-icon></v-btn>
+            </v-row>
+          </v-form>
+        </v-col>
       </v-col>
     </v-row>
     <v-row class="justify-center wrapper-section">
-      <v-col cols="4">
+      <v-col cols="4" style="margin-top: 50px; margin-bottom: 50px;">
         <span class="title-section">
           Conecte seu restaurante, da cozinha aos consumidores
         </span>
@@ -33,11 +54,13 @@
           Alcance seus clientes em qualquer lugar, com um POS integrado, 
           sistema de exibição de cozinha e solução de pedidos online.
         </span>
-        <a class="access-link" href="#" @click="scrollTop">
-          Quero me conectar e vender mais!
-        </a>
+        <v-btn text class="access-link" @click="scrollTop" style="color: #2CD4EC;">
+          Quero me conectar e vender mais!  <v-icon  style="margin-left: 10px;" color="deep-orange">
+            mdi-arrow-right
+          </v-icon>
+        </v-btn>
       </v-col>
-      <v-col cols="4">
+      <v-col cols="4" style="margin-top: 50px; margin-bottom: 50px;">
         <img src="./assets/shutterstock_432557365.png" width="100%"/>
       </v-col>
     </v-row>
@@ -50,9 +73,11 @@
         <span class="title-sub-section">
           Aceite pagamentos de forma segura, quer esteja a vender pessoalmente ou online
         </span>
-        <a class="access-link" href="#" @click="scrollTop">
-          Quero me conectar e vender mais!
-        </a>
+        <v-btn text class="access-link" @click="scrollTop" style="color: #EC2CA6;">
+          Quero me conectar e vender mais!  <v-icon  style="margin-left: 10px;" color="deep-orange">
+            mdi-arrow-right
+          </v-icon>
+        </v-btn>
       </v-col>
       <v-col cols="4">
         <img src="./assets/shutterstock_1928731409.png" width="100%"/>
@@ -60,24 +85,54 @@
     </v-row>
     <img class="wrapper-section" src="./assets/Grupo 10229@2x.png" />
     <v-row class="justify-center wrapper-section">
-      <v-col cols="4">
+      <v-col cols="4" style="margin-bottom: 70px;">
         <span class="title-section">
           Um kit de ferramentas de negócios. Para todos os negócios.
         </span>
         <span class="title-sub-section">
           Vendas, atração de clientes, retenção de clientes, captação de leads e remartketing. Tudo em um só lugar.        </span>
-        <a class="access-link" href="#" @click="scrollTop">
-          Quero me conectar e vender mais!
-        </a>
+        <v-btn text class="access-link" @click="scrollTop" style="color: #2CD4EC;">
+          Quero me conectar e vender mais!  <v-icon  style="margin-left: 10px;" color="deep-orange">
+            mdi-arrow-right
+          </v-icon>
+        </v-btn>
       </v-col>
       <v-col cols="4">
         <img src="./assets/shutterstock_432557365.png" width="100%"/>
       </v-col>
     </v-row>
     <v-row class="footer">
-      <img src="./assets/logo_sweepy@2x.png" />
-      <span class="footer-text">Conectando você a seus clientes</span>
-      <span class="footer-brand">Sweepy é uma marca Global Quarks. Todos os direitos reservados.</span>
+      <v-col cols=12>
+        <v-row>
+          <img src="../public/logoGambSweepy.png" width="30%" />
+        </v-row>
+        <v-row style="margin-top: 50px;">
+          <v-btn
+            icon
+            color="pink"
+            style="color: white;"
+          >
+            <v-icon>mdi-twitter</v-icon>
+          </v-btn>
+          <v-btn
+            icon
+            color="pink"
+            style="color: white;"
+          >
+            <v-icon>mdi-facebook</v-icon>
+          </v-btn>
+          <v-btn
+            icon
+            color="pink"
+            style="color: white;"
+          >
+            <v-icon>mdi-instagram</v-icon>
+          </v-btn>        
+        </v-row>
+        <v-row>
+          <span class="footer-brand" style="text-align: left;">Sweepy é uma marca Global Quarks. Todos os direitos reservados.</span>
+        </v-row>
+      </v-col>
     </v-row>
 
     <v-snackbar
@@ -148,8 +203,9 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 html {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -169,7 +225,7 @@ html {
 }
 
 .image-form {
-  width: 500px;
+  width: 580px;
   height: 250px;
   margin-left: -40px;
   position: relative;
@@ -178,6 +234,15 @@ html {
 
 .wrapper-intro {
   align-items: flex-end;
+}
+
+.span-text {
+  text-align: left;
+  font: normal normal normal 11px/28px Montserrat;
+  letter-spacing: 2.04px;
+  color: #19F7FF;
+  opacity: 1;
+  margin-top: -10px;
 }
 
 .container-intro {
@@ -206,6 +271,7 @@ html {
   letter-spacing: 0px;
   color: #FFFFFF;
   float: left;
+  margin-bottom: 10px;
 }
 
 .container-intro .sub-text
@@ -217,6 +283,7 @@ html {
   color: #FFFFFF;
   opacity: 1;
   float: left;
+  margin-bottom: 50px;
 }
 
 .form-fields {
@@ -225,6 +292,7 @@ html {
 
 .form-fields .form-field{
   margin-bottom: 10px !important;
+  margin-left: 40px !important;
 }
 
 .wrapper-section {
@@ -234,6 +302,18 @@ html {
 .title-section {
   text-align: left;
   font: normal normal bold 32px/39px Montserrat;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  float: left;
+}
+
+.title-want-section {
+  text-align: left;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  font: normal normal bold 24px/29px Montserrat;
   letter-spacing: 0px;
   color: #FFFFFF;
   opacity: 1;
@@ -274,6 +354,7 @@ html {
 
 .footer {
   background: #030303 0% 0% no-repeat padding-box;
+  width: 100vw;
   padding: 100px 200px 100px 200px;
 }
 
